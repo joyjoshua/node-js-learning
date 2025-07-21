@@ -9,26 +9,33 @@
 //Namaste Node Ep 4
 
 // const {calculateSum, SUM_KEY} = require('./modules/calculate/sum');
-const {calculateSum, calculateProduct, fileName, directoryName} = require('./modules/calculate')
-const userData = require('./data.json');
+// const {calculateSum, calculateProduct, fileName, directoryName} = require('./modules/calculate');
+const {calculateSum, calculateProduct, CONFIG_KEY} = require('./modules');
+// const userData = require('./data.json');
+// const {KEY} = require('find_me.js');
 console.log('APP MODULE RUNNING');
-console.log(fileName);
-console.log(directoryName);
+// console.log(KEY);
+// console.log(fileName);
+// console.log(directoryName);
+// console.log('module', module);
 var a = 10;
 var b = 20;
 
 calculateSum(a, b);
 calculateProduct(a, b);
-console.log("User Data:", userData);
+
+console.log('CONFIG KEY FROM utils: ', CONFIG_KEY);
+console.log(arguments);
+// console.log("User Data:", userData);
 // console.log('key from sum.js:',SUM_KEY);
 
 //IIFE
 
-(function(){
-    console.log('Immediately Invoked Function, hell yeah bro!');
-})();
+// (function(){
+//     console.log('Immediately Invoked Function, hell yeah bro!');
+// })();
 
-console.log((function(){console.log('IIFE')})) 
+// console.log((function(){console.log('IIFE')})) 
 
 // function modules() {
 //     let z = 20;

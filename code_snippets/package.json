@@ -1,3 +1,5 @@
 {
-    "type": "commonjs" 
+    "type": "commonjs",
+    "name": "utils",
+    "main": "util.config.js"
 }
