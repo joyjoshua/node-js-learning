@@ -21,11 +21,11 @@ console.log('APP MODULE RUNNING');
 var a = 10;
 var b = 20;
 
-calculateSum(a, b);
-calculateProduct(a, b);
+// calculateSum(a, b);
+// calculateProduct(a, b);
 
-console.log('CONFIG KEY FROM utils: ', CONFIG_KEY);
-console.log(arguments);
+// console.log('CONFIG KEY FROM utils: ', CONFIG_KEY);
+console.log('arguments',arguments);
 // console.log("User Data:", userData);
 // console.log('key from sum.js:',SUM_KEY);
 
