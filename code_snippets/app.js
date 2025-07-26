@@ -10,7 +10,7 @@
 
 // const {calculateSum, SUM_KEY} = require('./modules/calculate/sum');
 // const {calculateSum, calculateProduct, fileName, directoryName} = require('./modules/calculate');
-const {calculateSum, calculateProduct, CONFIG_KEY} = require('./modules');
+// const {calculateSum, calculateProduct, CONFIG_KEY} = require('./modules');
 // const userData = require('./data.json');
 // const {KEY} = require('find_me.js');
 console.log('APP MODULE RUNNING');
@@ -18,14 +18,14 @@ console.log('APP MODULE RUNNING');
 // console.log(fileName);
 // console.log(directoryName);
 // console.log('module', module);
-var a = 10;
-var b = 20;
+// var a = 10;
+// var b = 20;
 
 // calculateSum(a, b);
 // calculateProduct(a, b);
 
 // console.log('CONFIG KEY FROM utils: ', CONFIG_KEY);
-console.log('arguments',arguments);
+// console.log('arguments',arguments);
 // console.log("User Data:", userData);
 // console.log('key from sum.js:',SUM_KEY);
 
@@ -50,3 +50,22 @@ console.log('arguments',arguments);
 
 // modules();
 
+
+//Ep 6 - libuv and async IO
+
+var a = 10;
+var b = 20;
+
+const https = require('https');
+const fs = require('fs');
+
+https.get("https://api.github.com/users/joyjoshua",
+    (res) => {
+        console.log('username', res);
+});
+
+setTimeout(()=> {
+    console.log('timer for 1 second completed')
+}, 1000);
+
+console.log(a, b);
