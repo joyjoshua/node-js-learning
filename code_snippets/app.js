@@ -56,16 +56,31 @@ console.log('APP MODULE RUNNING');
 var a = 10;
 var b = 20;
 
+function multiply(a, b) {
+    const result = a * b;
+    return result;
+}
+
 const https = require('https');
 const fs = require('fs');
 
+fs.readFileSync("./file.txt", "utf8", (err, data) => {
+    console.log(data, err);
+});
+console.log('im late bruh');
+
 https.get("https://api.github.com/users/joyjoshua",
     (res) => {
-        console.log('username', res);
+        console.log('github profile fetched');
+});
+
+fs.readFile('./file.txt', "utf8", (err, data) => {
+    console.log("File Data:", data);
 });
 
 setTimeout(()=> {
     console.log('timer for 1 second completed')
 }, 1000);
 
-console.log(a, b);
+
+console.log(multiply(a, b));
