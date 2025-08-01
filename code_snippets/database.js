@@ -1,17 +1,18 @@
 const {MongoClient} = require('mongodb');
 
-const URI = "mongodb+srv://jcub3:eY3H8rb9cKvoBwgx@init-jcub3.nwlgofo.mongodb.net/?retryWrites=true&w=majority&appName=init-jcub3"
+require('dotenv').config({path: '../local.env'});
+
+const URI = process.env.DB_CLIENT_URI;
+const dbName = process.env.DB_NAME;
+const collectionName = process.env.COLLECTION_NAME;
 
 const client = new MongoClient(URI);
-
-const dbName = 'hyper';
-
 
 async function main() {
     await client.connect();
     console.log('Connected successfully to server');
     const db = client.db(dbName);
-    const collection = db.collection('User');
+    const collection = db.collection(collectionName);
 
     //Read
     // const result = await collection.find({}).toArray();
@@ -26,7 +27,7 @@ async function main() {
     };
 
     const insertResult = await collection.insertOne(data);
-    // console.log('Inserted doc', insertResult);
+    console.log('Inserted doc', insertResult);
 
     //count
 
